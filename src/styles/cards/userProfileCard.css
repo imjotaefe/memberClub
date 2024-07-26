@@ -1,0 +1,53 @@
+.userProfileCard {
+  grid-area: A;
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+  align-items: center;
+
+  & div:nth-child(2){
+    display: flex;
+    flex-direction: column;
+    gap: -0.5rem;
+
+    & h2 {
+      font-size: var(--fs-lg);
+      font-weight: var(--fw-bold);
+      color: var(--gray-600);
+    }
+
+    & span {
+      font-size: var(--fs-xs);
+      color: var(--gray-500);
+    }
+  }
+}
+
+.outerBox {
+  background: var(--gradient-base);
+  border-radius: 0.625rem;
+  padding: .1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 0;
+  max-width: 3.525rem;
+  max-height: 3.525rem;
+}
+
+.innerBox {
+  background-color: var(--gray-200);
+  border-radius: 0.53rem;
+  padding: .1rem;
+  
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  & img {
+    border-radius: 0.42rem;
+    width: 3.125rem;
+    height: 3.125rem;
+  }
+}

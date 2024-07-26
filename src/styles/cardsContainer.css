@@ -1,0 +1,17 @@
+.mainSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-inline: 17.4rem;
+}
+
+.cardsContainer {
+  display: grid;
+  grid-template-areas: 
+  "A  B  B"
+  "C  B  B"
+  "C  B  B"
+  "C  D  D";
+  gap: 1rem 1.5rem;
+  grid-template-columns: 1.2fr  1fr 1fr;
+}

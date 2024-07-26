@@ -1,0 +1,40 @@
+.historyCard {
+  grid-area: C;
+  padding: 1.75rem .5rem 0rem 1.5rem;
+
+  & header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: var(--fs-xs);
+    color: var(--gray-500);
+    margin-bottom: 1rem;
+    padding-right: 1.25rem;
+
+    & h3 {
+      font-weight: var(--fw-bold);
+    }
+    
+    & span {
+      font-weight: var(--fw-base);
+    }
+  }
+}
+
+.scheduleList {
+  padding-block: .75rem;
+  display: flex;
+  gap: .75rem;
+  flex-direction: column;
+  overflow-y: scroll;
+  max-height: 19.4rem;
+  padding-right: 1.25rem;
+  &::-webkit-scrollbar {
+    width: 0.4rem;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: var(--gray-300);
+    border-radius: 20rem;
+  }
+}
