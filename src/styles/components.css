@@ -17,16 +17,23 @@
     opacity: 1;
   }
 
-  &:disabled {
-    background-color: var(--gray-700);
-    opacity: .6;
-  }
-
   &:hover {
     background-color: var(--gray-600);
     opacity: 1;
     cursor: pointer;
   }
+
+  &:disabled {
+    background-color: var(--gray-700);
+    opacity: .6;
+    cursor: not-allowed;
+  }
+
+ 
+}
+
+.buttonActived {
+  opacity: 1;
 }
 
 .input {
@@ -79,10 +86,40 @@
   align-items: center;
   width: 5.5rem;
   height: 5.5rem;
-  padding: 1.5rem;
-
+  
   & img {
+    transition: scale 300ms ease;
     width: 4rem;
+    scale: 1;
+    animation: addSticker 500ms ease-in;
+
+    &:hover {
+      scale: 1.5;
+    }
+    
+  }
+}
+
+@keyframes addSticker {
+  0% {
+    scale: 0;
+  }
+  70% {
+    scale: 1.5;
+  }
+  100% {
+    scale: 1;
+  }
+}
+
+@media (width < 80rem){
+  .sticker {
+    width: 3.5rem;
+    height: 3.5rem;
+    
+    & img {
+      width: 2.6rem;
+    }
   }
 }
 
@@ -96,6 +133,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  &:hover {
+    opacity: 0.5;
+  }
 
   & div:nth-child(1) {
     font-size: var(--fs-xs);
@@ -120,6 +161,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    animation: addChecks 500ms ease-in;
 
     & img {
       width: 1.5rem;
@@ -127,3 +169,74 @@
     }
   }
 }
+
+@keyframes addChecks {
+  from {
+    transform: translateX(5rem);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.progressBar {
+  width: 100%;
+  height: .5rem;
+  background-color: var(--gray-300);
+  border-radius: 9rem;
+  
+  & div {
+    transition: width 400ms ease-in;
+    height: .5rem;
+    width: 0%;
+    background: var(--gradient-base);
+    border-radius: 9rem;
+  }
+}
+
+
+.modal {
+  background-color: rgba(0, 0, 0, 0.47);
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  display: none;
+
+  & > div {
+    background-color: var(--white);
+    border-radius: 1rem;
+    padding: 1.3rem 2rem;
+    min-height: 8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    & div {
+      display: flex;
+      justify-content: center;
+
+      & button {
+        color: var(--white);
+        padding: .54rem .75rem;
+        border: none;
+        border-radius: .5rem;
+        background-color: var(--gray-700);
+
+        &:hover {
+          background-color: var(--gray-600);
+          opacity: 1;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+.opened {
+  display: flex;
+}
+

@@ -15,3 +15,22 @@
   gap: 1rem 1.5rem;
   grid-template-columns: 1.2fr  1fr 1fr;
 }
+
+@media (width < 80rem){
+  .mainSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-inline: 1rem;
+  }
+
+  .cardsContainer {
+    grid-template-areas: 
+    "A"
+    "B"
+    "D"
+    "C";
+    grid-template-columns: 1fr;
+    gap: .5rem;
+  }
+}

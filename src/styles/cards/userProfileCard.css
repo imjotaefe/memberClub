@@ -16,7 +16,7 @@
       color: var(--gray-600);
     }
 
-    & span {
+    & p {
       font-size: var(--fs-xs);
       color: var(--gray-500);
     }

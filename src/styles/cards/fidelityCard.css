@@ -1,6 +1,6 @@
 .fidelityCard {
   grid-area: B;
-  padding: 2.25rem 2rem;
+  padding: 2rem 2rem;
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -14,6 +14,7 @@
       font-size: var(--fs-xs);
       font-weight: var(--fw-bold);
       color: var(--gray-500);
+      padding-top: .125rem;
     }
 
     & p {
@@ -47,6 +48,25 @@
 
 .stickersContainer {
   display: flex;
+  justify-content: center;
+  align-items: center;
   gap: 1rem;
   flex-wrap: wrap;
+}
+
+
+@media (width < 80rem){
+  .fidelityCard {
+    padding: 1.5rem 1.25rem;
+    & > header {
+      & p {
+        margin-top: 1rem;
+        max-width: 100%;
+        line-height: 1rem;
+      }
+      & div:last-child {
+        min-width: 12rem;
+      }
+    }
+  }
 }

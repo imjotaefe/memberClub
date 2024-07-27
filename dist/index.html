@@ -11,17 +11,18 @@
   <body>
     <header>
       <img src="src/assets/Logo.png" alt="Logo da aplicação" />
-      <form action="">
+      <form>
         <div class="input">
           <input type="text" placeholder="ID do cartão" />
           <button class="button">
-            <img src="src/assets/icons/arrow.svg" alt="">
+            <img src="src/assets/icons/arrow.svg" alt="Ícone de seta">
           </button>
         </div>
       </form>
     </header>
     <section class="mainSection">
       <div class="cardsContainer">
+        
         <div class="card userProfileCard">
           <div class="outerBox">
             <div class="innerBox">
@@ -29,16 +30,36 @@
             </div>
           </div>
           <div>
-            <h1>Natália Miranda</h1>
+            <h2>Natália Miranda</h2>
             <span>Cliente desde 18/09/2023</span>
           </div>
         </div>
-        <div class="card historyCard"><p>C</p></div>
+
+        <div class="card historyCard">
+          <header>
+            <h3>HISTÓRICO</h3>
+            <span>7 cortes</span>
+          </header>
+          <div class="separator"></div>
+          <div class="scheduleList">
+
+            <div class="schedule">
+              <div>
+                <span id="scheduleDate">29/04/2024</span>
+                <span id="scheduleTime">18:30</span>
+              </div>
+              <div>
+                <img src="src/assets/icons/check.svg" alt="Ícone de check">
+              </div>
+            </div>
+
+          </div>
+        </div>
 
         <div class="card fidelityCard">
           <header>
             <div>
-              <h4>CARTÃO FIDELIDADE</h4>
+              <h1>CARTÃO FIDELIDADE</h1>
               <p>Ao fazer cortes de cabelo, o décimo sai de graça!</p>
             </div>
             <div>
@@ -46,16 +67,27 @@
             </div>
           </header>
           <div class="stickersContainer">
-            <div class="sticker"><img src="src/assets/PinCheck.png" alt=""></div>
-            <div class="sticker"><img src="src/assets/PinCheck.png" alt=""></div>
-            <div class="sticker"><img src="src/assets/PinCheck.png" alt=""></div>
-            <div class="sticker"><img src="src/assets/PinCheck.png" alt=""></div>
-            <div class="sticker"><img src="src/assets/PinCheck.png" alt=""></div>
-            <div class="sticker"><img src="src/assets/PinCheck.png" alt=""></div>
-            <div class="sticker"><img src="src/assets/PinCheck.png" alt=""></div>
-            <div class="sticker"><img src="src/assets/PinCheck.png" alt=""></div>
-            <div class="sticker"><img src="src/assets/PinCheck.png" alt=""></div>
-            <div class="sticker"><img src="src/assets/PinGift.svg" alt=""></div>
+            <div class="sticker">
+              <img src="src/assets/PinCheck.png" alt="Ícone de check">
+            </div>
+            <div class="sticker">
+            </div>
+            <div class="sticker">
+            </div>
+            <div class="sticker">
+            </div>
+            <div class="sticker">
+            </div>
+            <div class="sticker">
+            </div>
+            <div class="sticker">
+            </div>
+            <div class="sticker">
+            </div>
+            <div class="sticker">
+            </div>
+            <div class="sticker gift">
+              <img src="src/assets/icons/gift-fill.svg" alt="Ícone de presente"></div>
           </div>
         </div>
 

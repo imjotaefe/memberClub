@@ -19,3 +19,10 @@ body > header {
   }
 }
 
+@media (width < 80rem){
+  body > header {
+    padding-inline: 1rem;
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+  }
+}
